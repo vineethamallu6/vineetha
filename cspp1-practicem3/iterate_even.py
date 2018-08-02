@@ -1,5 +1,4 @@
-n=2
-while n<11:
+n=1
+for n in range(2,11,2):
 	print(n)
-	n=n+2
 print("Goodbye!")
