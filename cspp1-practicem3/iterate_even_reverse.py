@@ -1,5 +1,5 @@
 print("Hello!")
 n=10
-while n>0:
+for n in range(10,1,-2)
 	print(n)
-	n=n-2
+	
