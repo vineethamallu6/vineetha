@@ -5,7 +5,7 @@ I = 0.0
 INCREMENT = 0.1
 while abs(I**2 - SQ) >= EPS:
     I += INCREMENT
-    if abs(I**2 - SQ) >= EPS:
+if abs(I**2 - SQ) >= EPS:
     print('failed')
 else:
     print(I)
