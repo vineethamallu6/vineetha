@@ -4,8 +4,8 @@ MUL = 1
 if NUM == 0:
     print('0')
 elif NUM < 0:
+    NUM = abs(NUM)
     while NUM < 0:
-        NUM = abs(NUM)
         TEMP = NUM%10
         MUL = MUL*TEMP
         NUM = NUM//10
