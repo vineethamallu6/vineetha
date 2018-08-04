@@ -1,6 +1,6 @@
 "'#input the string'"
 STRING = input()
-S = ' '
+S = ''
 I = 0
 for I in STRING:
     if I in'!@#$%^&*':
