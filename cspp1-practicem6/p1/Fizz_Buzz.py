@@ -13,4 +13,4 @@ for I in range(N+1):
             break
         print(I)
         break
-    I = I+1       
+    I = I+1
