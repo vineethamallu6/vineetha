@@ -1,3 +1,4 @@
+"'#input the value'"
 N = int(input())
 for I in range(N+1):
     while I > 0:
