@@ -1,6 +1,6 @@
 "'#enter the input'"
 SQ = int(input())
-EPS = 0.001
+EPS = 0.1
 LOW = 1.0
 HIGH = SQ
 RES = (HIGH+LOW)/2.0
