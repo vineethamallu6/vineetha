@@ -5,5 +5,5 @@ I = 0
 for I in STRING:
     if I in '!@#$%^&*':
         I = ' '
-    S = S+I
+    S += I
 print(str(S))
