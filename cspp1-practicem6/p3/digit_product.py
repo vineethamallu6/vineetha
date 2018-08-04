@@ -1,5 +1,6 @@
 "'input number'"
 NUM = int(input())
+NUM = abs(NUM)
 MUL = 1
 if NUM == 0:
     print('0')
