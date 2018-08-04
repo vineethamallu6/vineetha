@@ -1,7 +1,7 @@
 "'#enter the input'"
 SQ = int(input())
-EPS = 0.1
-LOW = 1.0
+EPS = 0.01
+LOW = 0
 HIGH = SQ
 RES = (HIGH+LOW)/2.0
 while abs(RES**2 - SQ) >= EPS:
