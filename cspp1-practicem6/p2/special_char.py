@@ -1,3 +1,4 @@
+"'input the string'"
 STRING = input()
 S = ' '
 I = 0
