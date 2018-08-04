@@ -1,16 +1,16 @@
-n=int(input())
-for i in range(n+1):
-    while i>0:
-        if i%3==0 and i%5==0:
+N = int(input())
+for I in range(N+1):
+    while I>0:
+        if I%3 == 0 and I%5 == 0:
             print("Fizz")
             print("Buzz")
             break
-        if i%3==0:
+        if I%3 == 0:
             print("Fizz")
             break
-        elif i%5==0:
+        elif I%5 == 0:
             print("Buzz")
             break
-        print(i)
+        print(I)
         break
-    i=i+1       
+    I = I+1       
