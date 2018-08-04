@@ -9,11 +9,10 @@ elif NUM < 0:
         TEMP = NUM%10
         MUL = MUL*TEMP
         NUM = NUM//10
-    print('-',MUL)
+    print('-', MUL)
 else:
     while NUM > 0:
         TEMP = NUM%10
         MUL = MUL*TEMP
         NUM = NUM//10
     print(MUL)
-    
