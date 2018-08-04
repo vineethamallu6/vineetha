@@ -1,8 +1,8 @@
 "'enter the input'"
-SQ=int(input())
-EPS=0.01
-I=0.0
-INCREMENT=0.1
+SQ = int(input())
+EPS = 0.01
+I = 0.0
+INCREMENT = 0.1
 while abs(I**2 - SQ) >= EPS:
     I += INCREMENT
     
