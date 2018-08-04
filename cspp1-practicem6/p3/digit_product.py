@@ -5,7 +5,7 @@ if NUM == 0:
     print('0')
 elif NUM < 0:
     NUM = abs(NUM)
-    while NUM < 0:
+    while NUM > 0:
         TEMP = NUM%10
         MUL = MUL*TEMP
         NUM = NUM//10
