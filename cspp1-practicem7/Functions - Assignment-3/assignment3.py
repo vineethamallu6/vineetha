@@ -1,4 +1,8 @@
+'"#input balance"'
 def paying_debt_offina_year(bal, annual_interest_rate):
+    '''
+    function definition
+    '''
     monthly_interest_rate = (annual_interest_rate) / 12.0
     monthly_payment_lower_bound = bal / 12
     monthly_payment_upper_bound = (bal * (1 + monthly_interest_rate)**12) / 12.0
@@ -24,6 +28,9 @@ def paying_debt_offina_year(bal, annual_interest_rate):
 
 
 def main():
+    '''
+    function call
+    '''
     data = input()
     # data = "4773 0.2"
     data = data.split(' ')
