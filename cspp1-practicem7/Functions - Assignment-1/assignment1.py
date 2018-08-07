@@ -23,8 +23,6 @@
 # Minimum monthly payment = (Minimum monthly payment rate) x (Previous balance)
 # Monthly unpaid balance = (Previous balance) - (Minimum monthly payment)
 # Updated balance each month = (Monthly unpaid balance) + (Monthly interest rate x Monthly unpaid balance)
-
-
 def payingdebtoffinayear(balance, annual_interest_rate, monthly_payment_rate):
     month = 1
     while month <= 12:
@@ -35,14 +33,10 @@ def payingdebtoffinayear(balance, annual_interest_rate, monthly_payment_rate):
         balance = updated_balance
         month += 1
     return round(updated_balance,2)
-            
-	
-
 def main():
     data = input()
     data = data.split(' ')
     data = list(map(float, data))
     print("Remaining balance: "+str(payingdebtoffinayear(data[0], data[1], data[2])))
-
 if __name__ == "__main__":
     main()
