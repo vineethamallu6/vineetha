@@ -25,8 +25,6 @@ def paying_debt_offina_year(bal, annual_interest_rate):
             return guess
 
         guess = (monthly_payment_lower_bound + monthly_payment_upper_bound)/2
-
-
 def main():
     '''
     function call
