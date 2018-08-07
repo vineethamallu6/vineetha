@@ -1,5 +1,5 @@
-"'#input balance'"
 def payingdebtoffinayear(balance, annual_interest_rate, monthly_payment_rate):
+"'#input balance'"
     month = 1
     while month <= 12:
         monthly_interest_rate = (annual_interest_rate)/12.0
@@ -10,8 +10,8 @@ def payingdebtoffinayear(balance, annual_interest_rate, monthly_payment_rate):
         balance = updated_balance
         month += 1
     return round(updated_balance, 2)
-"'#main function starts here'"
 def main():
+"'#main function starts here'"
     data = input()
     data = data.split(' ')
     data = list(map(float, data))
