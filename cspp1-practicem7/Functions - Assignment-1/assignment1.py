@@ -9,7 +9,7 @@ def payingdebtoffinayear(balance, annual_interest_rate, monthly_payment_rate):
         (monthly_interest_rate*monthly_unpaid_balance)
         balance = updated_balance
         month += 1
-    return round(updated_balance,2)
+    return round(updated_balance, 2)
 def main():
     data = input()
     data = data.split(' ')
