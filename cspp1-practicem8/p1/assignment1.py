@@ -5,7 +5,7 @@ def factorial(num):
 
     returns: a positive integer, the factorial of n.
     '''
-    if num==0 or num==1:
+    if num == 0 or num == 1:
         return 1
     else:
         return num*factorial(num-1)
