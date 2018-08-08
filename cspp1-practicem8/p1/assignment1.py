@@ -12,6 +12,6 @@ def main():
     main function
     '''
     ans = input()
-    print(factorial(int(ans)))    
+    print(factorial(int(ans)))
 if __name__ == "__main__":
     main()
