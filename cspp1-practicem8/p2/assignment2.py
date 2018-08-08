@@ -7,12 +7,13 @@ def sumofdigits(num):
     '''
     if num == 0:
         return 0
-    else:
-        return ((num%10) + sumofdigits(num//10))
+    return ((num%10) + sumofdigits(num//10))
 def main():
+    '''
+    main function
+    '''
     ans = input()
     print(sumofdigits(int(ans)))  
 
 if __name__ == "__main__":
     main()
-
