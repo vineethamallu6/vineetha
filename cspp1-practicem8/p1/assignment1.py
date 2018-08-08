@@ -1,4 +1,5 @@
-'"# input a value"'def factorial(num):
+"'# input a value'"
+def factorial(num):
     '''
     n is positive Integer
 
