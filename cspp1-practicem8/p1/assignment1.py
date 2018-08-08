@@ -1,4 +1,4 @@
-def factorial(num):
+'"# input a value"'def factorial(num):
     '''
     n is positive Integer
 
@@ -12,7 +12,7 @@ def main():
     '''
     main function
     '''
-    a = input()
-    print(factorial(int(a)))    
-if __name__== "__main__":
+    ans = input()
+    print(factorial(int(ans)))    
+if __name__ == "__main__":
     main()
