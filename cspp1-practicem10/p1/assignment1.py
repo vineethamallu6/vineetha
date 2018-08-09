@@ -5,7 +5,8 @@ a list of letters, letters_guessed. This function returns a string
 that is comprised of lowercase English letters - all lowercase English letters
 that are not in letters_guessed
 '''
-
+import string
+diction=string.ascii_lowercase)
 def get_available_letters(letters_guessed):
     '''
     :param letters_guessed: list, what letters have been guessed so far
@@ -13,7 +14,7 @@ def get_available_letters(letters_guessed):
       yet been guessed.
     '''
     string=''
-    for i in 'abcdefghijklmnopqrstuvwxyz':
+    for i in diction:
         if i not in letters_guessed:
             string=string+i
     return string
