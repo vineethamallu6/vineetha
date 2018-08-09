@@ -6,7 +6,7 @@ that is comprised of lowercase English letters - all lowercase English letters
 that are not in letters_guessed
 '''
 import string
-dic = string.ascii_lowercase
+DICT = string.ascii_lowercase
 def get_available_letters(letters_guessed):
     '''
     :param letters_guessed: list, what letters have been guessed so far
@@ -14,7 +14,7 @@ def get_available_letters(letters_guessed):
       yet been guessed.
     '''
     st_r = ''
-    for i in dic:
+    for i in DICT:
         if i not in letters_guessed:
             st_r = st_r + i
     return st_r
