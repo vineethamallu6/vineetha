@@ -18,10 +18,6 @@ def get_available_letters(letters_guessed):
         if i not in letters_guessed:
             string = string+i
     return string
-            
-
-
-
 def main():
     '''
     Main function for the given program
