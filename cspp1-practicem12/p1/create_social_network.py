@@ -45,8 +45,6 @@ def create_social_network(data):
         else:
             return adict
     return adict
-                
-
 def main():
     '''
         handling testcase input and printing output
