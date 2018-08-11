@@ -31,17 +31,17 @@ def create_social_network(data):
         Return a empty dictionary if the string format of the data is invalid
         Empty dictionary is not None, it is a dictionary with no keys
     '''
-    adict={}
-    list1=[]
+    adict = {}
+    list1 = []
     for i in data:
         if 'follows' in i:
-            list1=i.split('follows')
+            list1 = i.split('follows')
             if list1[0] in adict:
-                list1[1]=list1[1].split(',')
-                adict[list1[0]]=list1[1]
+                list1[1] = list1[1].split(',')
+                adict[list1[0]] = list1[1]
             else:
-                list1[1]=list1[1].split(',')
-                adict[list1[0]]=list1[1]
+                list1[1] = list1[1].split(',')
+                adict[list1[0]] = list1[1]
         else:
             return adict
     return adict
