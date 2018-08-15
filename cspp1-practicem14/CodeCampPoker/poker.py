@@ -33,7 +33,6 @@ def is_straight(hand):
         if int(list1[i+1]) - int(list1[i]) != 1:
             return False
     return True
-    
 def is_flush(hand):
     '''
         How do we find out if the given hand is a flush?
