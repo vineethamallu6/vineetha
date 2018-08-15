@@ -30,7 +30,7 @@ def is_straight(hand):
             list1.append(int(i[0]))
     list1.sort()
     for i in range(0, len(list1)-1):
-        if int(list1[i+1]) - int(list1[i])!=1:
+        if int(list1[i+1]) - int(list1[i]) != 1:
             return False
     return True
     '''
@@ -39,10 +39,6 @@ def is_straight(hand):
     card_values=set(['--23456789TJQKA'.index(c) for c,s in hand])
     return len(card_values)==5 and (max(card_values)-min (card_values)==4)
     '''
-            
-        
-    
-
 def is_flush(hand):
     '''
         How do we find out if the given hand is a flush?
@@ -90,8 +86,6 @@ def hand_rank(hand):
         return 1
     else:
         return 0
-
-
 def poker(hands):
     '''
         This function is completed for you. Read it to learn the code.
