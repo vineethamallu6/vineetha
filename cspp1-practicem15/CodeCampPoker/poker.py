@@ -94,6 +94,13 @@ def full_house(hand):
         if l4[i] == l4[i+1] == l4[i+2] and l4[i+3] == l4[i+4]:
             return True
     return False
+    
+def high_card(hand)
+    li_5=[]
+    for i in hand:
+        li_5.append(card_values[i[0]])
+        li_5.sort()
+    return max(li_5)
 
 def hand_rank(hand):
     '''
