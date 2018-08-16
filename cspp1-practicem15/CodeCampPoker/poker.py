@@ -95,14 +95,7 @@ def full_house(hand):
 			return True
 	return False
 
-def high_card(hand):
-	li_5=[]
-	for i in hand:
-		li_5.append(card_values[i[0]])
-	li_5.sort()
-	val = max(li_5)
-	print(val)
-	
+
 def hand_rank(hand):
 	'''
 		You will code this function. The goal of the function is to
