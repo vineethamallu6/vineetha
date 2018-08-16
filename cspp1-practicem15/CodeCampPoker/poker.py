@@ -99,7 +99,7 @@ def high_card(hand):
     li_5=[]
     for i in hand:
         li_5.append(card_values[i[0]])
-        li_5.sort()
+    li_5.sort()
     return max(li_5)
 
 def hand_rank(hand):
