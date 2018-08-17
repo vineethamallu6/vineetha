@@ -102,8 +102,6 @@ def poker(hands):
 
         Output: Return the winning poker hand
     '''
-
-
     # the line below may be new to you
     # max function is provided by python library
     # learn how it works, in particular the key argument, from the link
