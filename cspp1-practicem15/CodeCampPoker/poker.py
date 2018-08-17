@@ -69,9 +69,7 @@ def hand_rank(hand):
 
     # check for straight, flush and straight flush
     # best hand of these 3 would be a straight flush with the return value 3
-    # the s 4):
-        return (7, kind(ranks, 4), ranks)
-    if kind(ranks, 3)econd best would be a flush with the return value 2
+    # the second best would be a flush with the return value 2
     # third would be a straight with the return value 1
     # any other hand would be the fourth best with the return value 0
     # max in poker function uses these return values to select the best hand
@@ -79,7 +77,9 @@ def hand_rank(hand):
     ranks = card_rank(hand)
     if is_straight(ranks) and is_flush(hand):
         return (8, ranks)
-    if kind(ranks, and kind(ranks, 2):
+    if kind(ranks, 4):
+        return (7, kind(ranks, 4), ranks)
+    if kind(ranks, 3) and kind(ranks, 2):
         return (6, (kind(ranks, 3), kind(ranks, 2)))
     if is_flush(hand):
         return (5, ranks)
