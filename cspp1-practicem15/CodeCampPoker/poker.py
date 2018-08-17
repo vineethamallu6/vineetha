@@ -34,14 +34,17 @@ def is_flush(hand):
             return False
     return True
 def card_rank(hand):
+    '''rank of card'''
     ranks = sorted(['--23456789TJQKA'.index(c) for c, s in hand], reverse=True)
     return ranks
 def kind(ranks, n_1):
+    '''kind of card'''
     for r_1 in ranks:
         if ranks.count(r_1) == n_1:
             return r_1
     return 0
 def two_pair(ranks):
+    '''two pairs'''
     one = kind(ranks, 2)
     two = kind(sorted(ranks), 2)
     if one and two:
