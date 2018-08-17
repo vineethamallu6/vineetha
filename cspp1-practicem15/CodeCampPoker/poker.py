@@ -84,7 +84,7 @@ def hand_rank(hand):
     if is_straight(ranks):
         return (4, ranks)
     if kind(ranks, 3):
-        return (3, kind(ranks, 3), ranks) 
+        return (3, kind(ranks, 3), ranks)
     if two_pair(ranks):
         return (2, two_pair(ranks), ranks)
     if kind(ranks, 2):
