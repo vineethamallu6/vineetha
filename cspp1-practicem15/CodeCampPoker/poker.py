@@ -33,8 +33,6 @@ def is_flush(hand):
         if temp[1] != i[1]:
             return False
     return True
-    
-
 def card_rank(hand):
     ranks = sorted(['--23456789TJQKA'.index(c) for c, s in hand], reverse=True)
     return ranks
@@ -73,7 +71,6 @@ def hand_rank(hand):
     # third would be a straight with the return value 1
     # any other hand would be the fourth best with the return value 0
     # max in poker function uses these return values to select the best hand
-    
     ranks = card_rank(hand)
     if is_straight(ranks) and is_flush(hand):
         return (8, ranks)
@@ -92,9 +89,6 @@ def hand_rank(hand):
     if kind(ranks, 2):
         return (1, kind(ranks, 2), ranks)
     return (0, ranks)
-
-
-
 def poker(hands):
     '''
         This function is completed for you. Read it to learn the code.
