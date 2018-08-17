@@ -15,7 +15,7 @@ def is_straight(ranks):
 		Think of an algorithm: given the card face value how to check if it a straight
 		Write the code for it and return True if it is a straight else return False
 	'''
-	return len(set(ranks)) == 5 and (max(ranks)-min(ranks) == 4)
+	return len(set(ranks)) == 5 and (max(ranks) - min(ranks) == 4)
 
 
 def is_flush(hand):
@@ -36,16 +36,16 @@ def is_flush(hand):
 	
 
 def card_rank(hand):
-	ranks = sorted(['--23456789TJQKA'.index(c) for c, s in hand], reverse=True)
+	ranks = sorted(['--23456789TJQKA'.index(c) for c, s in hand], reverse = True)
 	return ranks
 def kind(ranks, n):
 	for r in ranks:
-		if ranks.count(r)==n:
+		if ranks.count(r) == n:
 			return r
 	return 0
 def two_pair(ranks):
-	one=kind(ranks,2)
-	two=kind(sorted(ranks),2)
+	one = kind(ranks, 2)
+	two = kind(sorted(ranks), 2)
 	if one and two:
 		return (one, two)
 	return 0
@@ -74,24 +74,24 @@ def hand_rank(hand):
 	# any other hand would be the fourth best with the return value 0
 	# max in poker function uses these return values to select the best hand
 	
-	ranks=card_rank(hand)
+	ranks = card_rank(hand)
 	if is_straight(ranks) and is_flush(hand):
-		return (8,ranks)
+		return (8, ranks)
 	if kind(ranks,4):
 		return (7, kind(ranks, 4), ranks)
 	if kind(ranks, 3) and kind(ranks, 2):
-		return (6,(kind(ranks,3),kind(ranks,2)))
+		return (6, (kind(ranks, 3), kind(ranks, 2)))
 	if is_flush(hand):
-		return (5,ranks)
+		return (5, ranks)
 	if is_straight(ranks):
-	    return (4,ranks)
-	if kind(ranks,3):
-	    return (3,kind(ranks,3),ranks) 
+	    return (4, ranks)
+	if kind(ranks, 3):
+	    return (3, kind(ranks, 3), ranks) 
 	if two_pair(ranks):
-		return (2,two_pair(ranks), ranks)
-	if kind(ranks,2):
-	    return (1,kind(ranks,2),ranks)
-	return (0,ranks)
+		return (2, two_pair(ranks), ranks)
+	if kind(ranks, 2):
+	    return (1, kind(ranks, 2), ranks)
+	return (0, ranks)
 
 
 
