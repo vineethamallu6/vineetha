@@ -81,15 +81,15 @@ def hand_rank(hand):
 		return (7, kind(ranks, 4), ranks)
 	if kind(ranks, 3) and kind(ranks, 2):
 		return (6,(kind(ranks,3),kind(ranks,2)))
-	if is_flush(hand)
+	if is_flush(hand):
 		return (5,ranks)
-	if is_straight(ranks)
+	if is_straight(ranks):
 	    return (4,ranks)
-	if kind(ranks,3)
+	if kind(ranks,3):
 	    return (3,kind(ranks,3),ranks) 
 	if two_pair(ranks):
 		return (2,two_pair(ranks), ranks)
-	if kind(ranks,2)
+	if kind(ranks,2):
 	    return (1,kind(ranks,2),ranks)
 	return (0,ranks)
 
