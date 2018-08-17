@@ -5,7 +5,7 @@
 '''
 card_values = {'T':10,'J':11,'Q':12,'K':13,'A':14,'2':2,'3':3,'4':4,'5':5,'6':6,'7':7,'8':8,'9':9}
 
-def is_straight(hand):
+def is_straight(ranks):
 	'''
 		How do we find out if the given hand is a straight?
 		The hand has a list of cards represented as strings.
@@ -15,15 +15,7 @@ def is_straight(hand):
 		Think of an algorithm: given the card face value how to check if it a straight
 		Write the code for it and return True if it is a straight else return False
 	'''
-	list1 = []
-	for i in hand:
-		list1.append(card_values[i[0]])
-	list1.sort()
-	for i in range(0, len(list1)-1):
-		if list1[i+1] - list1[i] != 1:
-			return False
-	return True
-
+	return len(set(ranks)) == 5 and (max(ranks)-min(ranks) == 4)
 
 
 def is_flush(hand):
@@ -42,60 +34,21 @@ def is_flush(hand):
 			return False
 	return True
 	
-def four_of_a_kind(hand):
-	'''four of a kind'''
-	list2 = []
-	for h in hand:
-		list2.append(card_values[h[0]])
-	list2.sort()
-	for i in range(0, len(list2)-3):
-		if list2[i] == list2[i+1] == list2[i+2] == list2[i+3]:
-			return True
-	return False
 
-def three_of_a_kind(hand):
-	'''three of kind'''
-	li_1 = []
-	for h in hand:
-		li_1.append(card_values[h[0]])
-	li_1.sort()
-	for i in range(0, len(li_1)-2):
-		if li_1[i] == li_1[i+1] == li_1[i+2]:
-			return True
-	return False
-
-def two_pair(hand):
-	'''two pairs'''
-	li_2 = []
-	for h in hand:
-		li_2.append(card_values[h[0]])
-	li_2.sort()
-	for i in range(0, len(li_2)-3):
-		if li_2[i] == li_2[i+1] and li_2[i+2] == li_2[i+3]:
-			return True
-	return False
-
-def one_pair(hand):
-	'''one pair'''
-	li_3 = []
-	for h in hand:
-		li_3.append(card_values[h[0]])
-	li_3.sort()
-	for i in range(0,len(li_3)-1):
-		if(li_3[i]) == (li_3[i+1]):
-			return True
-	return False
-def full_house(hand):
-	li_4 = []
-	for h in hand:
-		li_4.append(card_values[h[0]])
-	l4.sort()
-	for i in range(0, len(li_4)-1):
-		if li_4[i] == li_4[i+1] == li_4[i+2] and li_4[i+3] == li_4[i+4]:
-			return True
-	return False
-
-
+def card_rank(hand):
+	ranks = sorted(['--23456789TJQKA'.index(c) for c, s in hand], reverse=True)
+	return ranks
+def kind(ranks, n):
+	for r in ranks:
+		if ranks.count(r)==n:
+			return r
+	return 0
+def two_pair(ranks):
+	one=kind(ranks,2)
+	two=kind(sorted(ranks))
+	if one and two:
+		return (one, two)
+	return 0
 def hand_rank(hand):
 	'''
 		You will code this function. The goal of the function is to
@@ -120,24 +73,27 @@ def hand_rank(hand):
 	# third would be a straight with the return value 1
 	# any other hand would be the fourth best with the return value 0
 	# max in poker function uses these return values to select the best hand
-	if is_straight(hand) and is_flush(hand):
-		return 8
-	elif four_of_a_kind(hand):
-		return 7
-	elif three_of_a_kind(hand) and one_pair(hand):
-		return 6
-	elif is_flush(hand):
-		return 5
-	elif is_straight(hand):
-		return 4
-	elif three_of_a_kind(hand):
-		return 3
-	elif two_pair(hand):
-		return 2
-	elif one_pair(hand):
-		return 1
-	else:
-		return 0
+	
+	ranks=card_rank(hand)
+	if is_straight(ranks) and is_flush(hand):
+		return (8,ranks)
+	if kind(ranks,4):
+		return (7, kind(ranks, 4), ranks)
+	if kind(ranks, 3) and kind(ranks, 2):
+		return (6,(kind(ranks,3),kind(ranks,2)))
+	if is_flush(hand)
+		return (5,ranks)
+	if is_straight(ranks)
+	    return (4,ranks)
+	if kind(ranks,3)
+	    return (3,kind(ranks,3),ranks) 
+	if two_pair(ranks):
+		return (2,two_pair(ranks), ranks)
+	if kind(ranks,2)
+	    return (1,kind(ranks,2),ranks)
+	return (0,ranks)
+
+
 
 def poker(hands):
 	'''
