@@ -13,7 +13,7 @@ def similarity(dict1, dict2):
     dicti = {}
     for word in l_3:
         if word not in load_stopwords(FILE).keys():
-            if word not in '!@#$%^&*()_+-.,""=0123456789:' and "'":
+            if word not in '!@#$%^&*()_+-.,=0123456789:' and "'":
                 dicti[word] = (dict1.count(word), dict2.count(word))
     num = 0
     sum1 = 0
@@ -25,7 +25,7 @@ def similarity(dict1, dict2):
         sum1 += dicti[word][0] ** 2
         sum2 += dicti[word][1] ** 2
     dem = math.sqrt(sum1) * math.sqrt(sum2)
-    res=(num//dem)
+    res = math.floor((num//dem)*10)/10
     return res
 
 
