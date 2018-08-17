@@ -9,12 +9,12 @@ def similarity(dict1, dict2):
     '''
     list1 = dict1.split(' ')
     list2 = dict2.split(' ')
-    li = list1 + list2
+    l_3 = list1 + list2
     dicti = {}
-    for word in li:
+    for word in l_3:
         if word not in load_stopwords(file).keys():
             if word not in "!@#$%^&*()_+":
-                dicti[word] = (dict1.count(word),dict2.count(word))
+                dicti[word] = (dict1.count(word), dict2.count(word))
     num = 0
     sum1 = 0
     sum2 = 0
