@@ -25,7 +25,7 @@ def similarity(dict1, dict2):
         sum1 += dicti[word][0] ** 2
         sum2 += dicti[word][1] ** 2
     dem = math.sqrt(sum1) * math.sqrt(sum2)
-    res = num // dem
+    res = math.floor((num/dem)*10)/10
     return res
 
 
