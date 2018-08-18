@@ -4,11 +4,13 @@
 import re
 STOPWORDS = "stopwords.txt"
 def cleanup_words(input1):
+	'''cleaning words'''
     reg = re.compile('[^a-z]')
     input1 = input1.lower().split(' ')
     input1 = [reg.sub('', w.strip())for w in input1]
     return input1
 def remove_words(input1, input2):
+	'''remove words'''
     d_1 = {}
     d_1 = load_stopwords(STOPWORDS)
     word_list1 = cleanup_words(input1)
