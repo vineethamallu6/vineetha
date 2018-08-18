@@ -64,7 +64,7 @@ def build_search_index(docs):
     for line in docs:
         word_li.append(word_li(line))
     for i in word_li:
-        for word in w_1:
+        for word in i:
             if word not in dict1.keys():
                 for j, word_new in enumerate(word_li):
                     if word in word_new:
