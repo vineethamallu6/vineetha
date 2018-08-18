@@ -23,7 +23,7 @@
 
 # helper function to load the stop words from a file
 import re
-FILE="stopwords.txt"
+FILE = "stopwords.txt"
 def load_stopwords(filename):
     '''
         loads stop words from a file and returns a dictionary
