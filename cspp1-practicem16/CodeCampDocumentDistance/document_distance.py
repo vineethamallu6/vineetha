@@ -6,7 +6,7 @@ stopwords = "stopwords.txt"
 def cleanup_words(input1):
     reg = re.compile('[^a-z]')
     input1 = input1.lower().split(' ')
-    input1 = [reg.sub('',w.strip())for w in input1]
+    input1 = [reg.sub('', w.strip())for w in input1]
     return input1
 def remove_words(input1,input2):
     d = {}
@@ -17,7 +17,7 @@ def remove_words(input1,input2):
     dictionary = {}
     for word in word_list:
         if word not in d.keys() and len(word)>0:
-            dictionary[word] = (word_list1.count(word),word_list2.count(word))
+            dictionary[word] = (word_list1.count(word), word_list2.count(word))
     return dictionary
 import math
 def similarity(dict1, dict2):
@@ -25,7 +25,7 @@ def similarity(dict1, dict2):
         Compute the document distance as given in the PDF
     '''
     dictionary = {}
-    dictionary = remove_words(dict1,dict2)
+    dictionary = remove_words(dict1, dict2)
     num = 0
     dem = 0
     sum1 = 0
@@ -54,7 +54,7 @@ def main():
     input1 = input()
     input2 = input()
 
-    print(similarity(input1,input2))
+    print(similarity(input1, input2))
 
 if __name__ == '__main__':
     main()
