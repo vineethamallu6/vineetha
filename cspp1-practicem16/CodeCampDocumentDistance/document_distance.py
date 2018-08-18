@@ -2,7 +2,7 @@
     Document Distance - A detailed description is given in the PDF
 '''
 import re
-stopwords = "stopwords.txt"
+STOPWORDS = "stopwords.txt"
 def cleanup_words(input1):
     reg = re.compile('[^a-z]')
     input1 = input1.lower().split(' ')
@@ -10,7 +10,7 @@ def cleanup_words(input1):
     return input1
 def remove_words(input1, input2):
     d_1 = {}
-    d_1 = load_stopwords(stopwords)
+    d_1 = load_stopwords(STOPWORDS)
     word_list1 = cleanup_words(input1)
     word_list2 = cleanup_words(input2)
     word_list = word_list1 + word_list2
