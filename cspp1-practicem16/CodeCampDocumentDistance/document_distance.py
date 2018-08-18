@@ -8,7 +8,7 @@ def cleanup_words(input1):
     input1 = input1.lower().split(' ')
     input1 = [reg.sub('', w.strip())for w in input1]
     return input1
-def remove_words(input1,input2):
+def remove_words(input1, input2):
     d_1 = {}
     d_1 = load_stopwords(stopwords)
     word_list1 = cleanup_words(input1)
@@ -16,7 +16,7 @@ def remove_words(input1,input2):
     word_list = word_list1 + word_list2
     dictionary = {}
     for word in word_list:
-        if word not in d_1.keys() and len(word)>0:
+        if word not in d_1.keys() and len(word) > 0:
             dictionary[word] = (word_list1.count(word), word_list2.count(word))
     return dictionary
 import math
