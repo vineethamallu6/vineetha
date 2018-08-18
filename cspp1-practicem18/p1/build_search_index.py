@@ -59,10 +59,8 @@ def build_search_index(docs):
         # add or update the words of the doc to the search index
 
     # return search index
-
     dict1 = {}
     word_li = []
-    search = {}
     for line in docs:
         word_li.append(word_li(line))
     for i in word_li:
@@ -71,8 +69,6 @@ def build_search_index(docs):
                 for j, word_new in enumerate(word_li):
                     if word in word_new:
                         dict1[word] = [(j, word_new.count(word))] 
-
-
 # helper function to print the search index
 # use this to verify how the search index looks
 def print_search_index(index):
