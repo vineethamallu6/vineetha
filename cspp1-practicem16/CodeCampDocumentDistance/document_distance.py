@@ -2,6 +2,7 @@
     Document Distance - A detailed description is given in the PDF
 '''
 import re
+import math
 STOPWORDS = "stopwords.txt"
 def cleanup_words(input1):
     '''cleaning words'''
@@ -21,7 +22,6 @@ def remove_words(input1, input2):
         if word not in d_1.keys() and len(word) > 0:
             dictionary[word] = (word_list1.count(word), word_list2.count(word))
     return dictionary
-import math
 def similarity(dict1, dict2):
     '''
         Compute the document distance as given in the PDF
@@ -37,7 +37,7 @@ def similarity(dict1, dict2):
         sum1 += dictionary[0] ** 2
         sum2 += dictionary[1] ** 2
     dem = math.sqrt(sum1) * math.sqrt(sum2)
-    return (num/dem)
+    return num/dem
 
 def load_stopwords(filename):
     '''
