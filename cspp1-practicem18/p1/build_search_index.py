@@ -69,6 +69,7 @@ def build_search_index(docs):
                 for j, word_new in enumerate(word_li):
                     if word in word_new:
                         dict1[word] = [(j, word_new.count(word))] 
+    return dict1
 # helper function to print the search index
 # use this to verify how the search index looks
 def print_search_index(index):
