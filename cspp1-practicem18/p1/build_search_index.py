@@ -70,7 +70,7 @@ def build_search_index(docs):
             if word not in dict1.keys():
                 for j, word_new in enumerate(word_li):
                     if word in word_new:
-                        dict1[word]=[(j, word_new.count(word))] 
+                        dict1[word] = [(j, word_new.count(word))] 
 
 
 # helper function to print the search index
