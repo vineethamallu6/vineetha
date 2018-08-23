@@ -7,10 +7,10 @@ def mult_matrix(m1, m2):
         error message should be "Error: Matrix shapes invalid for mult"
     '''
     result = [[0 for row in range(len(m1))] for col in range(len(m2[0]))]
-    for i in range(len(m1)):
-        for j in range(len(m2[0])):
-           for k in range(len(m2)):
-               result[i][j] += m1[i][k] * m2[k][j]
+    for row in range(len(m1)):
+        for col in range(len(m2[0])):
+           for k_1 in range(len(m2)):
+               result[row][col] += m1[row][k_1] * m2[k_1][col]
     return result
 
 def add_matrix(m1, m2):
@@ -22,9 +22,9 @@ def add_matrix(m1, m2):
         error message should be "Error: Matrix shapes invalid for addition"
     '''
     result = [[0 for row in range(len(m1))] for col in range(len(m2[0]))]
-    for i in range(len(m1)):
-        for j in range(len(m1[0])):
-            result[i][j] = m1[i][j] + m2[i][j]
+    for row in range(len(m1)):
+        for col in range(len(m1[0])):
+            result[row][col] = m1[row][col] + m2[row][col]
     return result
 
 def read_matrix():
@@ -35,9 +35,9 @@ def read_matrix():
         print an error message and return None
         error message should be "Error: Invalid input for the matrix"
     '''
-    n,m = map(int,input().strip().split(","))
+    row,col = map(int,input().strip().split(","))
     matrix = []
-    for i in range(n):
+    for i in range(row):
         matrix.append(list(map(int, input().rstrip().split())))
     return matrix
             
