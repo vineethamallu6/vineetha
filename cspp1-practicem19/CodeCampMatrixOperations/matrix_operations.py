@@ -42,11 +42,11 @@ def main():
     ''' read matrix''' 
     matrix1 = []
     matrix1 = read_matrix()
-    if matrix1 is none:
+    if matrix1 is None:
         exit(0)
     matrix2 = []
     matrix2 = read_matrix()
-    if matrix2 is none:
+    if matrix2 is None:
         exit(0)
     print(add_matrix(matrix1, matrix2))
     print(mult_matrix(matrix1, matrix2))
