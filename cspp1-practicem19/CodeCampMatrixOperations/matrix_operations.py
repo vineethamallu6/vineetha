@@ -35,15 +35,19 @@ def read_matrix():
     '''
     row,col = map(int,input().strip().split(","))
     matrix = []
-    for i in range(row):
+    for i_1 in range(row):
         matrix.append(list(map(int, input().rstrip().split())))
     return matrix
 def main():
     ''' read matrix''' 
     matrix1 = []
     matrix1 = read_matrix()
+    if matrix1 is none:
+        exit(0)
     matrix2 = []
     matrix2 = read_matrix()
+    if matrix2 is none:
+        exit(0)
     print(add_matrix(matrix1, matrix2))
     print(mult_matrix(matrix1, matrix2))
 if __name__ == '__main__':
