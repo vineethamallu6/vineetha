@@ -51,10 +51,8 @@ def main():
     # read matrix 2
     matrix1=[]
     matrix1=read_matrix()
-    print(matrix1)
     matrix2=[]
     matrix2=read_matrix()
-    print(matrix2)
     print(add_matrix(matrix1,matrix2))
     print(mult_matrix(matrix1,matrix2))
 
