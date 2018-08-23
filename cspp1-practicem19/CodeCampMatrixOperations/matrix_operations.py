@@ -49,12 +49,12 @@ def main():
     # read matrix 1
 
     # read matrix 2
-    matrix1=[]
-    matrix1=read_matrix()
-    matrix2=[]
-    matrix2=read_matrix()
-    print(add_matrix(matrix1,matrix2))
-    print(mult_matrix(matrix1,matrix2))
+    matrix1 = []
+    matrix1 = read_matrix()
+    matrix2 = []
+    matrix2 = read_matrix()
+    print(add_matrix(matrix1, matrix2))
+    print(mult_matrix(matrix1, matrix2))
 
     # add matrix 1 and matrix 2
 
