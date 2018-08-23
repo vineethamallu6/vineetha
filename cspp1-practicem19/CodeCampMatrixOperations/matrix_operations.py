@@ -12,7 +12,6 @@ def mult_matrix(mat1, mat2):
            for k_1 in range(len(mat2)):
                result[row][col] += mat1[row][k_1] * mat2[k_1][col]
     return result
-
 def add_matrix(mat1, mat2):
     '''
         check if the matrix shapes are similar
@@ -26,7 +25,6 @@ def add_matrix(mat1, mat2):
         for col in range(len(mat1[0])):
             result[row][col] = mat1[row][col] + mat2[row][col]
     return result
-
 def read_matrix():
     '''
         read the matrix dimensions from input
@@ -40,11 +38,6 @@ def read_matrix():
     for i in range(row):
         matrix.append(list(map(int, input().rstrip().split())))
     return matrix
-            
-    
-
-
-
 def main():
     ''' read matrix''' 
     matrix1 = []
@@ -53,11 +46,5 @@ def main():
     matrix2 = read_matrix()
     print(add_matrix(matrix1, matrix2))
     print(mult_matrix(matrix1, matrix2))
-
-    # add matrix 1 and matrix 2
-
-    # multiply matrix 1 and matrix 2
-    pass
-
 if __name__ == '__main__':
     main()
