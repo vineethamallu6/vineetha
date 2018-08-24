@@ -61,13 +61,13 @@ def read_matrix(row,col):
 def main():
     ''' read matrix''' 
     
-    row,col = map(int,input().split(','))
-    matrix1 = read_matrix(row,col)
+    row, col = map(int, input().split(','))
+    matrix1 = read_matrix(row, col)
     if matrix1 is None:
         exit(0)
     
-    row,col = map(int,input().split(','))
-    matrix2 = read_matrix(row,col)
+    row, col = map(int, input().split(','))
+    matrix2 = read_matrix(row, col)
     if matrix2 is None:
         exit(0)
     print(add_matrix(matrix1, matrix2))
