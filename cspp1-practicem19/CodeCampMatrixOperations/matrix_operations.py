@@ -25,7 +25,7 @@ def add_matrix(mat1, mat2):
         and return None
         error message should be "Error: Matrix shapes invalid for addition"
     '''
-    result = [[0 for row in range(len(mat1))] for col in range(len(mat2[0]))]
+    result = [[0 for col in range(len(mat1[0]))] for row in range(len(mat1))]
     if len(mat1) == len(mat2) and len(mat1[0]) == len(mat2[0]):
         for row in range(len(mat1)):
             for col in range(len(mat1[0])):
