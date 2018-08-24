@@ -6,7 +6,7 @@ def mult_matrix(mat1, mat2):
         and return None
         error message should be "Error: Matrix shapes invalid for mult"
     '''
-    if len(mat1[0])==len(mat2):
+    if len(mat1[0]) == len(mat2):
         result = [[0 for row in range(len(mat1))] for col in range(len(mat2[0]))]
         for row in range (len(mat1)):
             for col in range (len(mat2[0])):
@@ -25,7 +25,7 @@ def add_matrix(mat1, mat2):
         and return None
         error message should be "Error: Matrix shapes invalid for addition"
     '''
-    result=[[0 for row in range(len(mat1))] for col in range(len(mat2[0]))]
+    result = [[0 for row in range(len(mat1))] for col in range(len(mat2[0]))]
     if len(mat1) == len(mat2) and len(mat1[0]) == len(mat2[0]):
         for row in range(len(mat1)):
             for col in range(len(mat1[0])):
@@ -45,9 +45,9 @@ def read_matrix(row,col):
     '''
     matrix = []
     for i in range(row):
-        i+=1
+        i += 1
         input1 = input().split(' ')
-        if len(input1)==col:
+        if len(input1) == col:
             matrix.append(list(map(int, input1)))
         else:
             print("Error: Invalid input for the matrix")
@@ -61,12 +61,12 @@ def read_matrix(row,col):
 def main():
     ''' read matrix''' 
     
-    row,col=map(int,input().split(','))
+    row,col = map(int,input().split(','))
     matrix1 = read_matrix(row,col)
     if matrix1 is None:
         exit(0)
     
-    row,col=map(int,input().split(','))
+    row,col = map(int,input().split(','))
     matrix2 = read_matrix(row,col)
     if matrix2 is None:
         exit(0)
