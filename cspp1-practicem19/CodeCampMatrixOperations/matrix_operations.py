@@ -14,7 +14,7 @@ def mult_matrix(mat1, mat2):
                     result[row][col] += mat1[row][k_1] * mat2[k_1][col]
         return result
     else:
-        print("Error:Matrix shapes invalid for mult")
+        print("Error: Matrix shapes invalid for mult")
         return None
 
 def add_matrix(mat1, mat2):
@@ -32,7 +32,7 @@ def add_matrix(mat1, mat2):
                 result[row][col] = mat1[row][col] + mat2[row][col]
         return result
     else:
-        print("Error:Matrix shapes invalid for addition")
+        print("Error: Matrix shapes invalid for addition")
         return None
 
 def read_matrix(row,col):
