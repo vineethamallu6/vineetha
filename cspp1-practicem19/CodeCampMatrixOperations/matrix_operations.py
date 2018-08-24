@@ -60,16 +60,21 @@ def read_matrix(row,col):
 def main():
     ''' read matrix''' 
     matrix1 = []
+    rows,cols=map(int,input().split(','))
     matrix1 = read_matrix(rows,cols)
+    if matrix1 is None:
+        exit(0)
     matrix2 = []
+    rows,cols=map(int,input().split(','))
     matrix2 = read_matrix(rows,cols)
+    if matrix2 is None:
+        exit(0)
     print(add_matrix(matrix1, matrix2))
     print(mult_matrix(matrix1, matrix2))
 
     # add matrix 1 and matrix 2
 
     # multiply matrix 1 and matrix 2
-    pass
 
 if __name__ == '__main__':
     main()
