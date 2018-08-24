@@ -11,7 +11,7 @@ def Tic_tac_toe(matrix):
             win.append(matrix[0][0])
         if matrix[2][0] == matrix[1][1] == matrix[0][2]:
             win.append(matrix[0][2])
-    if win[] == 0:
+    if len(win) == 0:
         print('draw')
         return None
     elif len(win) == 1:
