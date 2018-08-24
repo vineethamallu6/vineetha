@@ -14,7 +14,7 @@ def Tic_tac_toe(matrix):
     if len(win) == 0:
         print('draw')
         return None
-    elif len(win) == 1:
+    if len(win) == 1:
         if win[0] == 'x' or win[0] == 'o':
             print(win[0])
         else:
@@ -26,8 +26,8 @@ def Tic_tac_toe(matrix):
 def main():
     '''main function'''
     matx=[]
-    for i in range(0,3):
-        col=input().split(' ')
+    for i in range(0, 3):
+        col = input().split(' ')
         matx.append(col)
     Tic_tac_toe(matx)
 if __name__ == '__main__':
