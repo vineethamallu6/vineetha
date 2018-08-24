@@ -35,7 +35,7 @@ def add_matrix(mat1, mat2):
         print("Error:Matrix shapes invalid for addition")
         return None
 
-def read_matrix():
+def read_matrix(row,col):
     '''
         read the matrix dimensions from input
         create a list of lists and read the numbers into it
