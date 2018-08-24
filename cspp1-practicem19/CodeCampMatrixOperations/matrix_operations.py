@@ -47,7 +47,7 @@ def read_matrix():
     matrix = []
     for i in range(row):
         input1 = input()
-        if len(input1)==cols:
+        if len(input1)==col:
             matrix.append(list(map(int, input1.rstrip().split())))
         else:
             print("Error:Invalid input for the matrix")
