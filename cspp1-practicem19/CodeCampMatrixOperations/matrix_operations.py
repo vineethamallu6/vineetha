@@ -60,9 +60,9 @@ def read_matrix(row,col):
 def main():
     ''' read matrix''' 
     matrix1 = []
-    matrix1 = read_matrix()
+    matrix1 = read_matrix(rows,cols)
     matrix2 = []
-    matrix2 = read_matrix()
+    matrix2 = read_matrix(rows,cols)
     print(add_matrix(matrix1, matrix2))
     print(mult_matrix(matrix1, matrix2))
 
