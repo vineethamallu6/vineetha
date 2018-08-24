@@ -12,7 +12,7 @@ def mult_matrix(mat1, mat2):
             for col in enumerate(len(mat2[0])):
                 for k_1 in enumerate(len(mat2)):
                     result[row][col] += mat1[row][k_1] * mat2[k_1][col]
-    return result
+        return result
     else:
         print("Error:Matrix shapes invalid for mult")
         return None
@@ -27,12 +27,13 @@ def add_matrix(mat1, mat2):
     '''
     result=[[0 for row in range(len(mat1))] for col in range(len(mat2[0]))]
     if len(mat1) == len(mat2) and len(mat1[0]) == len(mat2[0]):
-    for row in range(len(mat1)):
-        for col in range(len(mat1[0])):
-            result[row][col] = mat1[row][col] + mat2[row][col]
-    return result
-    print("Error:Matrix shapes invalid for addition")
-    return None
+        for row in range(len(mat1)):
+            for col in range(len(mat1[0])):
+                result[row][col] = mat1[row][col] + mat2[row][col]
+        return result
+    else:
+        print("Error:Matrix shapes invalid for addition")
+        return None
 
 def read_matrix():
     '''
@@ -49,7 +50,7 @@ def read_matrix():
         if len(input_)==cols:
             matrix.append(list(map(int, input_.rstrip().split())))
         else:
-            print("Error:Invalid input for the matrix)
+            print("Error:Invalid input for the matrix")
             return None
     return matrix
             
