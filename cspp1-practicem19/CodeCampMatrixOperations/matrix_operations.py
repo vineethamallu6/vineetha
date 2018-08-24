@@ -43,7 +43,6 @@ def read_matrix():
         print an error message and return None
         error message should be "Error: Invalid input for the matrix"
     '''
-    row,col = map(int,input().strip().split(","))
     matrix = []
     for i in range(row):
         input1 = input()
