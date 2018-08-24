@@ -45,6 +45,7 @@ def read_matrix(row,col):
     '''
     matrix = []
     for i in range(row):
+        i+=1
         input1 = input()
         if len(input1)==col:
             matrix.append(list(map(int, input1.rstrip().split())))
@@ -59,12 +60,10 @@ def read_matrix(row,col):
 
 def main():
     ''' read matrix''' 
-    matrix1 = []
     rows,cols=map(int,input().split(','))
     matrix1 = read_matrix(rows,cols)
     if matrix1 is None:
         exit(0)
-    matrix2 = []
     rows,cols=map(int,input().split(','))
     matrix2 = read_matrix(rows,cols)
     if matrix2 is None:
