@@ -53,7 +53,7 @@ def read_matrix(row, col):
             return None
     return matrix
 def main():
-    ''' read matrix''' 
+    ''' read matrix'''
     row, col = map(int, input().split(','))
     matrix1 = read_matrix(row, col)
     if matrix1 is None:
