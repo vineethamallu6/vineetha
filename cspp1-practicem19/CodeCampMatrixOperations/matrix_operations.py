@@ -6,7 +6,7 @@ def mult_matrix(mat1, mat2):
         and return None
         error message should be "Error: Matrix shapes invalid for mult"
     '''
-    if len(mat1[0]==len(mat2):
+    if len(mat1[0])==len(mat2):
         result = [[0 for row in range(len(mat1))] for col in range(len(mat2[0]))]
         for row in enumerate(len(mat1)):
             for col in enumerate(len(mat2[0])):
@@ -14,7 +14,7 @@ def mult_matrix(mat1, mat2):
                     result[row][col] += mat1[row][k_1] * mat2[k_1][col]
     return result
     else:
-        print('Error:Matrix shapes invalid for mult')
+        print("Error:Matrix shapes invalid for mult")
         return None
 
 def add_matrix(mat1, mat2):
