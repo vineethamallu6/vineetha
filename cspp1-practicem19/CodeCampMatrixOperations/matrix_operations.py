@@ -64,9 +64,7 @@ def main():
         exit(0)
     print(add_matrix(matrix1, matrix2))
     print(mult_matrix(matrix1, matrix2))
-
     # add matrix 1 and matrix 2
-
     # multiply matrix 1 and matrix 2
 if __name__ == '__main__':
     main()
