@@ -14,7 +14,7 @@ def Tic_tac_toe(matrix):
     if len(win) == 0:
         print('draw')
         return None
-    if len(win) == 1:
+    elif len(win) == 1:
         if win[0] == 'x' or win[0] == 'o':
             print(win[0])
         else:
