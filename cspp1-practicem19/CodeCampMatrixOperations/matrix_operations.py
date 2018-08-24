@@ -16,7 +16,6 @@ def mult_matrix(mat1, mat2):
     else:
         print("Error: Matrix shapes invalid for mult")
         return None
-
 def add_matrix(mat1, mat2):
     '''
         check if the matrix shapes are similar
@@ -34,7 +33,6 @@ def add_matrix(mat1, mat2):
     else:
         print("Error: Matrix shapes invalid for addition")
         return None
-
 def read_matrix(row,col):
     '''
         read the matrix dimensions from input
@@ -53,14 +51,8 @@ def read_matrix(row,col):
             print("Error: Invalid input for the matrix")
             return None
     return matrix
-            
-    
-
-
-
 def main():
     ''' read matrix''' 
-    
     row, col = map(int, input().split(','))
     matrix1 = read_matrix(row, col)
     if matrix1 is None:
@@ -76,6 +68,5 @@ def main():
     # add matrix 1 and matrix 2
 
     # multiply matrix 1 and matrix 2
-
 if __name__ == '__main__':
     main()
