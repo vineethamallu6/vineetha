@@ -50,7 +50,7 @@ def read_matrix(row,col):
         if len(input1)==col:
             matrix.append(list(map(int, input1)))
         else:
-            print("Error:Invalid input for the matrix")
+            print("Error: Invalid input for the matrix")
             return None
     return matrix
             
