@@ -31,9 +31,8 @@ def add_matrix(mat1, mat2):
             for col in range(len(mat1[0])):
                 result[row][col] = mat1[row][col] + mat2[row][col]
         return result
-    else:
-        print("Error: Matrix shapes invalid for addition")
-        return None
+    print("Error: Matrix shapes invalid for addition")
+    return None
 def read_matrix(row, col):
     '''
         read the matrix dimensions from input
@@ -48,9 +47,8 @@ def read_matrix(row, col):
         input1 = input().split(' ')
         if len(input1) == col:
             matrix.append(list(map(int, input1)))
-        else:
-            print("Error: Invalid input for the matrix")
-            return None
+        print("Error: Invalid input for the matrix")
+        return None
     return matrix
 def main():
     ''' read matrix''' 
