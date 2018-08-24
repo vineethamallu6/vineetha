@@ -8,9 +8,9 @@ def mult_matrix(mat1, mat2):
     '''
     if len(mat1[0]) == len(mat2):
         result = [[0 for row in range(len(mat1))] for col in range(len(mat2[0]))]
-        for row in range (len(mat1)):
-            for col in range (len(mat2[0])):
-                for k_1 in range (len(mat2)):
+        for row in range(len(mat1)):
+            for col in range(len(mat2[0])):
+                for k_1 in range(len(mat2)):
                     result[row][col] += mat1[row][k_1] * mat2[k_1][col]
         return result
     else:
