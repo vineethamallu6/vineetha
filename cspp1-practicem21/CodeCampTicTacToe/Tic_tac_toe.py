@@ -1,5 +1,5 @@
 '''function'''
-def TicTacToe(matrix):
+def tictactoe(matrix):
     '''checking condition'''
     win = []
     for i in matrix:
@@ -30,6 +30,6 @@ def main():
     for i in range(0, 3):
         col = input().split(' ')
         matx.append(col)
-    TicTacToe(matx)
+    tictactoe(matx)
 if __name__ == '__main__':
     main()
