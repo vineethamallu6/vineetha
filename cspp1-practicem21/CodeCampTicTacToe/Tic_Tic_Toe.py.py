@@ -20,7 +20,7 @@ def tictactoe(matrix):
             print(win[0])
         else:
             print('invalid input')
-            return None
+        return None
     else:
         print('invalid game')
         return None
