@@ -27,7 +27,6 @@ def tictactoe(matrix):
 def main():
     '''main function'''
     matx = []
-    i=0
     for i in range(0, 3):
         col = input().split(' ')
         matx.append(col)
