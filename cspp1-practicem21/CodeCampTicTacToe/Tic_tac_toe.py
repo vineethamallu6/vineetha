@@ -32,4 +32,4 @@ def main():
         matx.append(col)
     Tic_tac_toe(matx)
 if __name__ == '__main__':
-	main()
+    main()
