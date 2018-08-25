@@ -25,7 +25,7 @@ def Tic_tac_toe(matrix):
         return None
 def main():
     '''main function'''
-    matx=[]
+    matx = []
     for i in range(0, 3):
         col = input().split(' ')
         matx.append(col)
