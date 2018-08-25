@@ -6,7 +6,7 @@ import re
 def clean_string(string):
     '''cleaning words'''
     reg = re.compile('[^[a-z,A-Z,0-9]')
-    string = reg.sub('',string.strip())
+    string = reg.sub('', string.strip())
     return string
 
 def main():
