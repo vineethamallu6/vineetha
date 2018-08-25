@@ -14,9 +14,6 @@ def tokenize(string):
         if word not in dict1.keys():
             dict1[word] = ((i, j.count(j)) for i,j in enumerate(word1) )
     return dict1
-
-
-            
 def main():
 	'''main'''
     string=""
