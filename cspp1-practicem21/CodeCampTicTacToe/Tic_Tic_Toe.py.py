@@ -12,7 +12,7 @@ def tictactoe(matrix):
         win.append(matrix[0][0])
     if matrix[2][0] == matrix[1][1] == matrix[0][2]:
         win.append(matrix[0][2])
-    if len(win) == 0:
+    if win == []:
         print('draw')
         return None
     if len(win) == 1:
