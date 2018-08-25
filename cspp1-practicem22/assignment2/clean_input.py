@@ -5,7 +5,7 @@ alphabets in both upper and lower case and numbers.
 import re
 def clean_string(string):
     '''cleaning words'''
-    reg = re.compile('[a-z],[A-Z],[0-9]')
+    reg = re.compile('[!@#$%^&*()_+]')
     string = reg.sub('',string)
     return string
 
