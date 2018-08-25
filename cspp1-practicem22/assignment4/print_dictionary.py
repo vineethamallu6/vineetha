@@ -9,7 +9,7 @@ def print_dictionary(dictionary):
         print(key, "-", value)
 def main():
 	'''main'''
-    dictionary = eval(input())
-    print_dictionary(dictionary)
+	dictionary = eval(input())
+	print_dictionary(dictionary)
 if __name__ == '__main__':
     main()
