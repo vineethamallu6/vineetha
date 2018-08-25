@@ -15,7 +15,7 @@ def tictactoe(matrix):
     if len(win) == 0:
         print('draw')
         return None
-    elif len(win) == 1:
+    if len(win) == 1:
         if win[0] == 'x' or win[0] == 'o':
             print(win[0])
         else:
