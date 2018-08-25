@@ -1,3 +1,4 @@
+'''function'''
 def Tic_tac_toe(matrix):
     '''checking condition'''
     win = []
