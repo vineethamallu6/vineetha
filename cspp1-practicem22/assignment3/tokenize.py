@@ -4,6 +4,7 @@ each word
 '''
 
 def tokenize(string):
+	'''token'''
     dict1 = {}
     word1 = []
     string=string.split(' ')
@@ -17,6 +18,7 @@ def tokenize(string):
 
             
 def main():
+	'''main'''
     string=""
     num=int(input())
     for i in range(num):
