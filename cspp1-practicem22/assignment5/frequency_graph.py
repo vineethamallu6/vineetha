@@ -10,6 +10,7 @@ def frequency_graph(dictionary):
     for d in dictionary.keys():
         value=dictionary[d]
         co.append(value)
+    print(d)
     for i in co:
         string=string+"#"
     for key, value in sorted(dictionary.items()):
