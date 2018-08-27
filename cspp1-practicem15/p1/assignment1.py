@@ -259,9 +259,6 @@ class CiphertextMessage(Message):
                 self.max_valid_words = valid_words_count
                 self.decrypted_message = (26 - shift, decrypted)
         return self.decrypted_message
-        
-
-
 ### DO NOT MODIFY THIS METHOD ###
 def main():
     ''' This method is provided to handle testcases'''
@@ -270,4 +267,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
