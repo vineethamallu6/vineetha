@@ -148,11 +148,6 @@ class Message:
             else:
                 new_msg.append(self.build_shift_dict(shift)[i])
         return ''.join(new_msg)
-
-
-### Paste your implementation of the Message class here
-        
-
 def main():
     '''
         Function to handle testcases
